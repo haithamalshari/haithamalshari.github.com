@@ -495,7 +495,7 @@
     padding-right: 20%;
     flex: 1;
     text-align: right;
-    background: rgb(255, 244, 235);
+    background: none;
   }
 
   .nav-links ul li {
@@ -519,7 +519,7 @@
     justify-content: left;
     padding-left: 5%;
     padding-right: 5%;
-    height: 20vh;
+    /* height: 20vh; */
   }
   .pt2down {
     padding-top: 5vh;
@@ -527,11 +527,11 @@
     padding-right: 5%;
     display: grid;
     grid-template-areas: "pt2left pt2right";
-    height: 80vh;
+    /* height: 80vh; */
   }
 
   .pt3 {
-    height: 100vh;
+    /* height: 100vh; */
     padding-left: 5%;
     padding-right: 5%;
     background: rgb(250, 250, 250);
@@ -540,7 +540,7 @@
   .pt3up {
     padding-top: 7vh;
     justify-content: left;
-    height: 20vh;
+    /* height: 20vh; */
   }
 
   .pt3down {
@@ -551,14 +551,14 @@
     grid-template-areas:
       "proj1 proj2 proj3"
       "proj4 proj5 proj6";
-    height: 80vh;
+    /* height: 80vh; */
     grid-row-gap: 20px;
     grid-column-gap: 20px;
     padding-bottom: 5vh;
   }
 
   .pt4 {
-    height: 100vh;
+    /* height: 100vh; */
     padding-left: 5%;
     padding-right: 5%;
     background: rgb(255, 255, 255);
@@ -567,7 +567,7 @@
   .pt4up {
     padding-top: 7vh;
     justify-content: left;
-    height: 20vh;
+    /* height: 20vh; */
   }
   .pt4down {
     /* padding-top: 20vh; */
@@ -577,7 +577,7 @@
     grid-template-areas:
       "proj1 proj2 proj3"
       "proj4 proj5 proj6";
-    height: 120vh;
+    /* height: 120vh; */
     grid-row-gap: 20px;
     grid-column-gap: 20px;
     padding-bottom: 5vh;
@@ -623,7 +623,7 @@
     padding-right: 20%;
     flex: 1;
     text-align: right;
-    background: rgb(255, 244, 235);
+    background: none;
   }
 
   .nav-links ul li {
