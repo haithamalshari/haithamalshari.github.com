@@ -2,28 +2,30 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
 }
-/* 
-.main {
-  display: grid;
-  grid-template-areas:
-    "1fr"
-    "1fr";
-} */
-.pt1 {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding-left: 20%;
-  padding-right: 20%;
-  height: 100vh;
+
+.pt1main {
   background: rgb(255, 244, 235);
   background: linear-gradient(
     180deg,
     rgba(255, 244, 235, 1) 0%,
     rgba(232, 223, 214, 1) 100%
   );
+}
+.socMedia {
+  display: flex;
+  justify-content: space-around;
+  filter: contrast(90%);
+}
+.pt1 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 10em;
+  padding-left: 4em;
+  padding-right: 4em;
+  padding-bottom: 8em;
   color: rgb(1, 1, 59);
 }
 
@@ -31,20 +33,72 @@
   padding-right: 5%;
 }
 #imghead {
-  width: 300px;
-  height: auto;
+  display: none;
+}
+
+/* Dropdown Button */
+.dropbtn {
+  background-color: rgba(233, 203, 178, 0);
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.img-menu {
+  display: block;
+  margin-top: 1em;
+  margin-left: 1em;
+  width: 10%;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  width: 100%;
+  display: none;
+  position: absolute;
+  background-color: rgb(255, 244, 235);
+  min-width: 160px;
+  box-shadow: 0px 8px 8px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  font-size: 2em;
+  color: rgb(1, 1, 59);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {
+  display: block;
 }
 .nav-links {
+  display: none;
   padding-top: 2%;
   padding-right: 20%;
   flex: 1;
   text-align: right;
-  background: rgb(255, 244, 235);
 }
 
 .nav-links ul li {
+  display: none;
   list-style: none;
-  display: inline-block;
+  /* display: inline-block; */
   margin: 0 20px;
 }
 
@@ -83,7 +137,7 @@
   padding-top: 10vh;
   display: flex;
   justify-content: left;
-  padding-left: 20%;
+  padding-left: 5%;
   padding-right: 20%;
   height: 20vh;
 }
@@ -102,12 +156,14 @@
 }
 
 .pt2down {
-  padding-top: 5vh;
-  padding-left: 20%;
-  padding-right: 20%;
+  padding-top: 1em;
+  padding-left: 5%;
+  padding-right: 5%;
   display: grid;
-  grid-template-areas: "pt2left pt2right";
-  height: 80vh;
+  grid-template-areas:
+    "pt2left"
+    "pt2right";
+  /* height: 80vh; */
 }
 
 .pt2left {
@@ -198,6 +254,7 @@
   color: rgba(255, 255, 255, 0);
 }
 .pt2right {
+  padding-top: 2em;
   text-align: left;
 }
 
@@ -207,17 +264,20 @@
   padding-bottom: 15px;
 }
 
+.summary2 {
+  padding-bottom: 2em;
+}
+
 .pt3 {
-  height: 100vh;
-  padding-left: 20%;
-  padding-right: 20%;
+  padding-left: 5%;
+  padding-right: 5%;
   background: rgb(250, 250, 250);
 }
 
 .pt3up {
-  padding-top: 7vh;
+  padding-top: 3em;
   justify-content: left;
-  height: 20vh;
+  height: 10em;
 }
 
 .pt3up1 {
@@ -225,7 +285,7 @@
   justify-content: left;
 }
 .pt3up2 {
-  padding-top: 10px;
+  padding-top: 1em;
   font-weight: bold;
   font-size: 20px;
 }
@@ -246,12 +306,7 @@
 .pt3down {
   /* padding-top: 20vh; */
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  grid-template-areas:
-    "proj1 proj2 proj3"
-    "proj4 proj5 proj6";
-  height: 80vh;
+  grid-template-columns: 1fr;
   grid-row-gap: 20px;
   grid-column-gap: 20px;
   padding-bottom: 5vh;
@@ -308,16 +363,15 @@
 }
 
 .pt4 {
-  height: 100vh;
-  padding-left: 20%;
-  padding-right: 20%;
+  padding-left: 5%;
+  padding-right: 5%;
   background: rgb(255, 255, 255);
 }
 
 .pt4up {
-  padding-top: 7vh;
+  padding-top: 3em;
   justify-content: left;
-  height: 20vh;
+  height: 11em;
 }
 
 .pt4up1 {
@@ -346,12 +400,7 @@
 .pt4down {
   /* padding-top: 20vh; */
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  grid-template-areas:
-    "proj1 proj2 proj3"
-    "proj4 proj5 proj6";
-  height: 120vh;
+  grid-template-columns: 1fr;
   grid-row-gap: 20px;
   grid-column-gap: 20px;
   padding-bottom: 5vh;
@@ -405,4 +454,260 @@
   margin-right: auto;
   display: block;
   width: 90%;
+}
+
+@media only screen and (min-width: 768px) {
+  .socMedia {
+    display: none;
+  }
+
+  .dropbtn {
+    display: none;
+  }
+  .nav-links {
+    display: block;
+  }
+
+  .nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+  }
+
+  .pt1 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-left: 5%;
+    padding-right: 5%;
+    height: 100vh;
+    color: rgb(1, 1, 59);
+  }
+
+  #imghead {
+    display: block;
+    width: 300px;
+    height: auto;
+  }
+
+  .nav-links {
+    padding-top: 2%;
+    padding-right: 20%;
+    flex: 1;
+    text-align: right;
+    background: rgb(255, 244, 235);
+  }
+
+  .nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+  }
+
+  .social {
+    padding-top: 10px;
+    margin-bottom: -7px;
+    width: 25px;
+    height: auto;
+    filter: contrast(90%);
+    /* filter: hue-rotate(300deg); */
+  }
+
+  .pt2up {
+    padding-top: 10vh;
+    display: flex;
+    justify-content: left;
+    padding-left: 5%;
+    padding-right: 5%;
+    height: 20vh;
+  }
+  .pt2down {
+    padding-top: 5vh;
+    padding-left: 5%;
+    padding-right: 5%;
+    display: grid;
+    grid-template-areas: "pt2left pt2right";
+    height: 80vh;
+  }
+
+  .pt3 {
+    height: 100vh;
+    padding-left: 5%;
+    padding-right: 5%;
+    background: rgb(250, 250, 250);
+  }
+
+  .pt3up {
+    padding-top: 7vh;
+    justify-content: left;
+    height: 20vh;
+  }
+
+  .pt3down {
+    /* padding-top: 20vh; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "proj1 proj2 proj3"
+      "proj4 proj5 proj6";
+    height: 80vh;
+    grid-row-gap: 20px;
+    grid-column-gap: 20px;
+    padding-bottom: 5vh;
+  }
+
+  .pt4 {
+    height: 100vh;
+    padding-left: 5%;
+    padding-right: 5%;
+    background: rgb(255, 255, 255);
+  }
+
+  .pt4up {
+    padding-top: 7vh;
+    justify-content: left;
+    height: 20vh;
+  }
+  .pt4down {
+    /* padding-top: 20vh; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "proj1 proj2 proj3"
+      "proj4 proj5 proj6";
+    height: 120vh;
+    grid-row-gap: 20px;
+    grid-column-gap: 20px;
+    padding-bottom: 5vh;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .socMedia {
+    display: none;
+  }
+
+  .dropbtn {
+    display: none;
+  }
+  .nav-links {
+    display: block;
+  }
+
+  .nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+  }
+
+  .pt1 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-left: 20%;
+    padding-right: 20%;
+    height: 100vh;
+    color: rgb(1, 1, 59);
+  }
+
+  #imghead {
+    display: block;
+    width: 300px;
+    height: auto;
+  }
+
+  .nav-links {
+    padding-top: 2%;
+    padding-right: 20%;
+    flex: 1;
+    text-align: right;
+    background: rgb(255, 244, 235);
+  }
+
+  .nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+  }
+
+  .social {
+    padding-top: 10px;
+    margin-bottom: -7px;
+    width: 25px;
+    height: auto;
+    filter: contrast(90%);
+    /* filter: hue-rotate(300deg); */
+  }
+
+  .pt2up {
+    padding-top: 10vh;
+    display: flex;
+    justify-content: left;
+    padding-left: 20%;
+    padding-right: 20%;
+    height: 20vh;
+  }
+  .pt2down {
+    padding-top: 5vh;
+    padding-left: 20%;
+    padding-right: 20%;
+    display: grid;
+    grid-template-areas: "pt2left pt2right";
+    height: 80vh;
+  }
+
+  .pt3 {
+    height: 100vh;
+    padding-left: 20%;
+    padding-right: 20%;
+    background: rgb(250, 250, 250);
+  }
+
+  .pt3up {
+    padding-top: 7vh;
+    justify-content: left;
+    height: 20vh;
+  }
+
+  .pt3down {
+    /* padding-top: 20vh; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "proj1 proj2 proj3"
+      "proj4 proj5 proj6";
+    height: 80vh;
+    grid-row-gap: 20px;
+    grid-column-gap: 20px;
+    padding-bottom: 5vh;
+  }
+
+  .pt4 {
+    height: 100vh;
+    padding-left: 20%;
+    padding-right: 20%;
+    background: rgb(255, 255, 255);
+  }
+
+  .pt4up {
+    padding-top: 7vh;
+    justify-content: left;
+    height: 20vh;
+  }
+  .pt4down {
+    /* padding-top: 20vh; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "proj1 proj2 proj3"
+      "proj4 proj5 proj6";
+    height: 120vh;
+    grid-row-gap: 20px;
+    grid-column-gap: 20px;
+    padding-bottom: 5vh;
+  }
 }
