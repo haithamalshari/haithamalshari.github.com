@@ -890,6 +890,19 @@ img {
   outline: none;
   padding: 0.25rem 0.5rem 0.5rem 0;
 }
+
+input[type="submit"] {
+  text-decoration: none;
+  border: none;
+  font-family: var(--normal-font-size);
+  padding-right: 3rem;
+  cursor: pointer;
+}
+.submit-icon {
+  display: inline-flex;
+  margin-left: -2rem;
+  color: white;
+}
 /*==================== FOOTER ====================*/
 .footer {
   padding-top: 2rem;

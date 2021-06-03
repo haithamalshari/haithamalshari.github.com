@@ -176,3 +176,33 @@ themeButton.addEventListener("click", () => {
   localStorage.setItem("selected-theme", getCurrentTheme());
   localStorage.setItem("selected-icon", getCurrentIcon());
 });
+
+/*==================== Contact me form Sender ====================*/
+// console.log(document.querySelector(".contact__form"));
+document.querySelector(".contact__form").addEventListener("submit", submitForm);
+
+function submitForm(e) {
+  e.preventDefault();
+
+  // Get Inputs Values
+  let name = document.getElementById("name").value;
+  let email = document.getElementById("email").value;
+  let project = document.getElementById("project").value;
+  let message = document.getElementById("message").value;
+
+  // Send email function
+  sendEmail(name, email, project, message);
+}
+
+// Send email function
+function sendEmail(name, email, project, message) {
+  Email.send({
+    Host: "smtp.gmail.com",
+    Username: "haithm.alshari@gmail.com",
+    Password: "xldjpqbzabiayyuq",
+    To: "haithm.alshari@gmail.com",
+    From: email,
+    Subject: `${name} sent you a message`,
+    Body: `Name: ${name} <br/> Email: ${email} <br/> Project: ${project} <br/> Message: ${message}`,
+  }).then((message) => alert("The message has successfully sent"));
+}
