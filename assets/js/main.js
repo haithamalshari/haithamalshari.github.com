@@ -206,3 +206,21 @@ function sendEmail(name, email, project, message) {
     Body: `Name: ${name} <br/> Email: ${email} <br/> Project: ${project} <br/> Message: ${message}`,
   }).then((message) => alert("The message has successfully sent"));
 }
+
+// Registering a ServiceWorker
+window.addEventListener('load', e => {
+  new PWAConfApp();
+  registerSW(); 
+});
+
+async function registerSW() { 
+  if ('serviceWorker' in navigator) { 
+    try {
+      await navigator.serviceWorker.register('./sw.js'); 
+    } catch (e) {
+      alert('ServiceWorker registration failed. Sorry about that.'); 
+    }
+  } else {
+    document.querySelector('.alert').removeAttribute('hidden'); 
+  }
+}
